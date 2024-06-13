@@ -19,6 +19,14 @@ class ChartResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+    protected static ?string $navigationLabel = 'Tables';
+
+    protected static ?string $modelLabel = 'Tables';
+
+    protected static ?int $navigationSort = 2;
+
+    protected static ?string $recordTitleAttribute = 'id';
+
     public static function form(Form $form): Form
     {
         return $form
