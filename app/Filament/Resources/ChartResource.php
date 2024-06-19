@@ -31,7 +31,21 @@ class ChartResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('name')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('station_id')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('task_time')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('method_time')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('shift')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -39,7 +53,29 @@ class ChartResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('name')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('station_id')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('task_time')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('method_time')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('shift')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
