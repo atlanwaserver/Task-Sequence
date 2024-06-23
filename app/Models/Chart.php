@@ -15,5 +15,7 @@ class Chart extends Model
         'task_time',
         'method_time',
         'shift',
+        'date',
+        'project',
     ];
 }

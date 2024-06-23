@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('task_time');
             $table->string('method_time');
             $table->string('shift');
+            $table->string('date');
+            $table->string('project');
             $table->timestamps();
         });
     }

@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
+            $table->string('serial_no');
             $table->string('name');
             $table->string('designation');
             $table->string('duration');
+            $table->string('method_time');
             $table->timestamps();
         });
     }

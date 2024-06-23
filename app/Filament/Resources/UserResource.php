@@ -27,6 +27,9 @@ class UserResource extends Resource
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('employee_id')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('card_number')
                     ->required()
                     ->maxLength(255),
@@ -43,6 +46,9 @@ class UserResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('employee_id')
+                    ->sortable()
+                    ->searchable(),
                 Tables\Columns\TextColumn::make('card_number')
                     ->sortable()
                     ->searchable(),

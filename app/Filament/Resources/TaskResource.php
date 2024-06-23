@@ -36,6 +36,12 @@ class TaskResource extends Resource
                 Forms\Components\TextInput::make('duration')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('serial_no')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('method_time')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -50,6 +56,12 @@ class TaskResource extends Resource
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('duration')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('serial_no')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('method_time')
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')

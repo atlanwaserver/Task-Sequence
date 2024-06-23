@@ -46,6 +46,12 @@ class ChartResource extends Resource
                 Forms\Components\TextInput::make('shift')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\TextInput::make('date')
+                    ->required()
+                    ->maxLength(255),
+                Forms\Components\TextInput::make('project')
+                    ->required()
+                    ->maxLength(255),
             ]);
     }
 
@@ -66,6 +72,12 @@ class ChartResource extends Resource
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('shift')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('date')
+                    ->sortable()
+                    ->searchable(),
+                Tables\Columns\TextColumn::make('project')
                     ->sortable()
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
